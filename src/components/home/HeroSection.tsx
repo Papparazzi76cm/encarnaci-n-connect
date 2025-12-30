@@ -22,9 +22,6 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 container-custom px-4 sm:px-6 lg:px-8 py-32 md:py-40">
         <div className="max-w-4xl">
-          <span className="inline-block px-4 py-2 bg-gold/20 text-gold border border-gold/30 rounded-full text-sm font-medium mb-6 animate-fade-in">
-            Estándares europeos de transparencia
-          </span>
           
           <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-cream leading-tight mb-6 animate-fade-in-delay-1">
             Te ayudo a vivir o invertir en{" "}
