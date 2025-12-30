@@ -45,8 +45,17 @@ const properties = [
 ];
 
 const PropertyCard = ({ property }: { property: typeof properties[0] }) => {
+  const slugMap: Record<number, string> = {
+    1: 'casa-moderna-piscina',
+    2: 'departamento-vista-rio',
+    3: 'terreno-potencial',
+  };
+
   return (
-    <div className="group bg-card rounded-xl overflow-hidden border border-border hover-lift">
+    <Link 
+      to={`/propiedades/${slugMap[property.id]}`}
+      className="group bg-card rounded-xl overflow-hidden border border-border hover-lift block"
+    >
       <div className="relative aspect-[4/3] overflow-hidden">
         <img
           src={property.image}
@@ -97,7 +106,7 @@ const PropertyCard = ({ property }: { property: typeof properties[0] }) => {
           </div>
         )}
       </div>
-    </div>
+    </Link>
   );
 };
 
