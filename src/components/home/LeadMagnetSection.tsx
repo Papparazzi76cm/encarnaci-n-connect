@@ -1,16 +1,53 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Download, Check } from "lucide-react";
+import { Download, Check, Loader2 } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
 
 const LeadMagnetSection = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real app, this would send to a backend
-    setSubmitted(true);
+    
+    if (!name.trim() || !email.trim()) {
+      toast({
+        title: "Campos requeridos",
+        description: "Por favor, completa tu nombre y email.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsLoading(true);
+
+    try {
+      const { error } = await supabase.from("leads").insert({
+        name: name.trim(),
+        email: email.trim(),
+        source: "lead_magnet",
+      });
+
+      if (error) throw error;
+
+      setSubmitted(true);
+      toast({
+        title: "¡Guía enviada!",
+        description: "Revisa tu email en los próximos minutos.",
+      });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast({
+        title: "Error",
+        description: "Hubo un problema. Por favor, intenta de nuevo.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -68,6 +105,7 @@ const LeadMagnetSection = () => {
                           value={name}
                           onChange={(e) => setName(e.target.value)}
                           required
+                          maxLength={100}
                           className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 text-foreground"
                           placeholder="Nombre"
                         />
@@ -82,13 +120,23 @@ const LeadMagnetSection = () => {
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
                           required
+                          maxLength={255}
                           className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 text-foreground"
                           placeholder="email@ejemplo.com"
                         />
                       </div>
-                      <Button type="submit" variant="gold" size="lg" className="w-full">
-                        <Download className="w-4 h-4" />
-                        Descargar Guía Gratis
+                      <Button type="submit" variant="gold" size="lg" className="w-full" disabled={isLoading}>
+                        {isLoading ? (
+                          <>
+                            <Loader2 className="w-4 h-4 animate-spin" />
+                            Enviando...
+                          </>
+                        ) : (
+                          <>
+                            <Download className="w-4 h-4" />
+                            Descargar Guía Gratis
+                          </>
+                        )}
                       </Button>
                       <p className="text-xs text-muted-foreground text-center">
                         Sin spam. Solo información útil.
