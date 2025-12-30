@@ -10,15 +10,19 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { toast } from "@/hooks/use-toast";
+import { PropertyForm } from "@/components/admin/PropertyForm";
+import type { Tables } from "@/integrations/supabase/types";
 import { 
   LogOut, Home, Users, Building2, Mail, Phone, Calendar,
-  Trash2, Loader2, AlertCircle
+  Trash2, Loader2, AlertCircle, Plus, Pencil
 } from "lucide-react";
 
 const Admin = () => {
   const { user, isAdmin, isLoading: authLoading, signOut } = useAuth();
   const navigate = useNavigate();
   const queryClient = useQueryClient();
+  const [propertyFormOpen, setPropertyFormOpen] = useState(false);
+  const [editingProperty, setEditingProperty] = useState<Tables<"properties"> | null>(null);
 
   useEffect(() => {
     if (!authLoading) {
@@ -332,6 +336,10 @@ const Admin = () => {
             <Card>
               <CardHeader className="flex flex-row items-center justify-between">
                 <CardTitle>Propiedades</CardTitle>
+                <Button onClick={() => { setEditingProperty(null); setPropertyFormOpen(true); }}>
+                  <Plus className="w-4 h-4 mr-2" />
+                  Nueva Propiedad
+                </Button>
               </CardHeader>
               <CardContent>
                 {propertiesLoading ? (
@@ -350,7 +358,7 @@ const Admin = () => {
                           <TableHead>Precio</TableHead>
                           <TableHead>Tipo</TableHead>
                           <TableHead>Destacada</TableHead>
-                          <TableHead className="w-[50px]"></TableHead>
+                          <TableHead className="w-[100px]">Acciones</TableHead>
                         </TableRow>
                       </TableHeader>
                       <TableBody>
@@ -376,15 +384,25 @@ const Admin = () => {
                               )}
                             </TableCell>
                             <TableCell>
-                              <Button
-                                variant="ghost"
-                                size="icon"
-                                onClick={() => deletePropertyMutation.mutate(property.id)}
-                                disabled={deletePropertyMutation.isPending}
-                                className="text-destructive hover:text-destructive hover:bg-destructive/10"
-                              >
-                                <Trash2 className="w-4 h-4" />
-                              </Button>
+                              <div className="flex gap-1">
+                                <Button
+                                  variant="ghost"
+                                  size="icon"
+                                  onClick={() => { setEditingProperty(property); setPropertyFormOpen(true); }}
+                                  className="text-primary hover:text-primary hover:bg-primary/10"
+                                >
+                                  <Pencil className="w-4 h-4" />
+                                </Button>
+                                <Button
+                                  variant="ghost"
+                                  size="icon"
+                                  onClick={() => deletePropertyMutation.mutate(property.id)}
+                                  disabled={deletePropertyMutation.isPending}
+                                  className="text-destructive hover:text-destructive hover:bg-destructive/10"
+                                >
+                                  <Trash2 className="w-4 h-4" />
+                                </Button>
+                              </div>
                             </TableCell>
                           </TableRow>
                         ))}
@@ -401,6 +419,12 @@ const Admin = () => {
             </Card>
           </TabsContent>
         </Tabs>
+
+        <PropertyForm
+          open={propertyFormOpen}
+          onOpenChange={setPropertyFormOpen}
+          property={editingProperty}
+        />
       </main>
     </div>
   );
