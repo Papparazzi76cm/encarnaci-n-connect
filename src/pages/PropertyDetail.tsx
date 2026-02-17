@@ -278,7 +278,7 @@ const PropertyDetail = () => {
                 </h2>
                 <div className="aspect-[16/9] rounded-xl overflow-hidden bg-muted">
                   <iframe
-                    src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=${encodeURIComponent(property.location + ', Paraguay')}&zoom=14`}
+                    src={`https://maps.google.com/maps?q=${encodeURIComponent(property.location + ', Paraguay')}&t=&z=14&ie=UTF8&iwloc=&output=embed`}
                     title={`Mapa de ${property.location}`}
                     className="w-full h-full border-0"
                     loading="lazy"
