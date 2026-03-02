@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { Send, Loader2 } from "lucide-react";
+import { notifyNewLead } from "@/lib/notify-lead";
 
 interface PropertyContactFormProps {
   propertyId: string;
@@ -46,6 +47,16 @@ const PropertyContactForm = ({ propertyId, propertyTitle }: PropertyContactFormP
       });
 
       if (error) throw error;
+
+      // Send email notification
+      await notifyNewLead({
+        name: formData.name.trim(),
+        email: formData.email.trim(),
+        phone: formData.phone.trim() || null,
+        message: formData.message.trim() || null,
+        source: "property",
+        property_id: propertyId,
+      });
 
       toast({
         title: "¡Mensaje enviado!",

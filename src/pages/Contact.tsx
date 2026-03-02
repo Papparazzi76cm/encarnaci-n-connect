@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { MapPin, Mail, Send, CheckCircle, Phone, Loader2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
+import { notifyNewLead } from "@/lib/notify-lead";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -43,6 +44,16 @@ const ContactPage = () => {
       });
 
       if (error) throw error;
+
+      // Send email notification
+      await notifyNewLead({
+        name: formData.name.trim(),
+        email: formData.email.trim(),
+        phone: formData.phone.trim() || null,
+        message: formData.message.trim(),
+        source: "contact",
+        interested_in: formData.subject || null,
+      });
 
       setSubmitted(true);
     } catch (error) {

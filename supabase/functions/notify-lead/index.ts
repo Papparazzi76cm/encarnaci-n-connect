@@ -1,5 +1,3 @@
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
-
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers":
@@ -14,39 +12,70 @@ Deno.serve(async (req) => {
   }
 
   try {
+    const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
+    if (!RESEND_API_KEY) {
+      throw new Error("RESEND_API_KEY not configured");
+    }
+
     const { name, email, phone, message, source, property_id, interested_in } = await req.json();
 
-    const subject = source === "property"
-      ? `Nuevo lead: Consulta sobre propiedad`
+    const sourceLabel = source === "property"
+      ? "Consulta sobre propiedad"
       : source === "lead_magnet"
-      ? `Nuevo lead: Descarga de guía`
-      : `Nuevo lead: Formulario de contacto`;
+      ? "Descarga de guía"
+      : "Formulario de contacto";
 
-    const body = `
-Nuevo contacto recibido:
+    const htmlBody = `
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+        <h2 style="color: #1a365d; border-bottom: 2px solid #d4a853; padding-bottom: 10px;">
+          Nuevo Lead: ${sourceLabel}
+        </h2>
+        <table style="width: 100%; border-collapse: collapse; margin-top: 16px;">
+          <tr><td style="padding: 8px 0; font-weight: bold; color: #555;">Nombre:</td><td style="padding: 8px 0;">${name}</td></tr>
+          <tr><td style="padding: 8px 0; font-weight: bold; color: #555;">Email:</td><td style="padding: 8px 0;"><a href="mailto:${email}">${email}</a></td></tr>
+          ${phone ? `<tr><td style="padding: 8px 0; font-weight: bold; color: #555;">Teléfono:</td><td style="padding: 8px 0;"><a href="tel:${phone}">${phone}</a></td></tr>` : ""}
+          ${interested_in ? `<tr><td style="padding: 8px 0; font-weight: bold; color: #555;">Interesado en:</td><td style="padding: 8px 0;">${interested_in}</td></tr>` : ""}
+          ${property_id ? `<tr><td style="padding: 8px 0; font-weight: bold; color: #555;">Propiedad:</td><td style="padding: 8px 0;">${property_id}</td></tr>` : ""}
+          <tr><td style="padding: 8px 0; font-weight: bold; color: #555;">Origen:</td><td style="padding: 8px 0;">${source}</td></tr>
+        </table>
+        ${message ? `
+          <div style="margin-top: 20px; padding: 16px; background: #f7f7f7; border-radius: 8px;">
+            <strong style="color: #555;">Mensaje:</strong>
+            <p style="margin-top: 8px; white-space: pre-wrap;">${message}</p>
+          </div>
+        ` : ""}
+        <p style="margin-top: 24px; font-size: 12px; color: #999;">
+          Enviado desde Encarnación Inmobiliaria
+        </p>
+      </div>
+    `;
 
-Nombre: ${name}
-Email: ${email}
-${phone ? `Teléfono: ${phone}` : ""}
-Origen: ${source}
-${interested_in ? `Interesado en: ${interested_in}` : ""}
-${property_id ? `Propiedad ID: ${property_id}` : ""}
-${message ? `\nMensaje:\n${message}` : ""}
-    `.trim();
+    const res = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${RESEND_API_KEY}`,
+      },
+      body: JSON.stringify({
+        from: "Encarnación Inmobiliaria <onboarding@resend.dev>",
+        to: [NOTIFY_EMAIL],
+        reply_to: email,
+        subject: `🏠 ${sourceLabel} — ${name}`,
+        html: htmlBody,
+      }),
+    });
 
-    // Use Lovable AI to send the email via Resend-compatible endpoint
-    const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
-    const SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+    const data = await res.json();
 
-    // Send email using the built-in Supabase email capabilities
-    // We'll use a simple fetch to a transactional email service
-    // For now, log the notification and store it
-    console.log(`📧 Email notification to ${NOTIFY_EMAIL}`);
-    console.log(`Subject: ${subject}`);
-    console.log(body);
+    if (!res.ok) {
+      console.error("Resend error:", data);
+      throw new Error(data.message || "Failed to send email");
+    }
+
+    console.log("Email sent successfully:", data.id);
 
     return new Response(
-      JSON.stringify({ success: true, message: "Notification processed" }),
+      JSON.stringify({ success: true }),
       { headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
   } catch (error) {
