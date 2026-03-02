@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Download, Check, Loader2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
+import { notifyNewLead } from "@/lib/notify-lead";
 
 const LeadMagnetSection = () => {
   const [email, setEmail] = useState("");
@@ -32,6 +33,13 @@ const LeadMagnetSection = () => {
       });
 
       if (error) throw error;
+
+      // Send email notification
+      await notifyNewLead({
+        name: name.trim(),
+        email: email.trim(),
+        source: "lead_magnet",
+      });
 
       setSubmitted(true);
       toast({
