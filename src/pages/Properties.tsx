@@ -2,8 +2,9 @@ import { useState } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
-import { Bed, Bath, Square, MapPin, Search, Filter } from "lucide-react";
+import { Bed, Bath, Square, MapPin, Search } from "lucide-react";
 import property1 from "@/assets/property-1.jpg";
 import property2 from "@/assets/property-2.jpg";
 import property3 from "@/assets/property-3.jpg";
@@ -104,16 +105,21 @@ const Properties = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title={`Venta y Alquiler de Propiedades en Encarnación | ${activeCategory !== 'Todos' ? activeCategory : 'Inmuebles'}`}
+        description="Catálogo de propiedades exclusivas en Encarnación, Paraguay. Departamentos en la Costanera, casas, terrenos y oportunidades de inversión."
+        url="https://encarnacioninmobiliaria.com/propiedades"
+      />
       <Header />
       <main className="pt-20 md:pt-24">
         {/* Hero */}
         <section className="bg-primary text-primary-foreground py-16 md:py-24">
           <div className="container-custom px-4 sm:px-6 lg:px-8">
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-              Propiedades
+              Propiedades en Encarnación
             </h1>
             <p className="text-primary-foreground/80 text-lg max-w-2xl">
-              Selección exclusiva de propiedades en Encarnación. Calidad sobre cantidad.
+              Selección exclusiva de propiedades en la zona sur de Paraguay. Calidad sobre cantidad.
             </p>
           </div>
         </section>
@@ -127,7 +133,7 @@ const Properties = () => {
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
                 <input
                   type="text"
-                  placeholder="Buscar propiedades..."
+                  placeholder="Buscar inmuebles, zonas..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-10 pr-4 py-2.5 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
@@ -160,11 +166,12 @@ const Properties = () => {
             {filteredProperties.length > 0 ? (
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredProperties.map((property) => (
-                  <div key={property.id} className="group bg-card rounded-xl overflow-hidden border border-border hover-lift">
+                  <article key={property.id} className="group bg-card rounded-xl overflow-hidden border border-border hover-lift">
                     <div className="relative aspect-[4/3] overflow-hidden">
                       <img
                         src={property.image}
-                        alt={property.title}
+                        alt={`${property.title} - Inmueble en ${property.location}, Encarnación`}
+                        loading="lazy"
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                       <div className="absolute top-4 left-4 flex gap-2">
@@ -183,9 +190,9 @@ const Properties = () => {
                         <MapPin className="w-4 h-4" />
                         {property.location}
                       </div>
-                      <h3 className="font-display text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                      <h2 className="font-display text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
                         {property.title}
-                      </h3>
+                      </h2>
                       <p className="text-2xl font-bold text-gold mb-4">{property.priceDisplay}</p>
                       
                       {property.beds > 0 ? (
@@ -219,7 +226,7 @@ const Properties = () => {
                         </Button>
                       </div>
                     </div>
-                  </div>
+                  </article>
                 ))}
               </div>
             ) : (
