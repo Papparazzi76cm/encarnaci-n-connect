@@ -22,7 +22,7 @@ const ContactCTASection = () => {
               </a>
             </Button>
             <Button variant="outline" size="xl" asChild>
-              <a href="mailto:carlos@iadomus.com">
+              <a href="mailto:hola@trazo.digital">
                 <Mail className="w-5 h-5" />
                 Enviar Email
               </a>
