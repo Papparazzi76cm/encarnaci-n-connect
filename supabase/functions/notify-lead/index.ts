@@ -57,7 +57,7 @@ Deno.serve(async (req) => {
         Authorization: `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: "Encarnación Inmobiliaria <onboarding@resend.dev>",
+        from: "Encarnación Inmobiliaria <noreply@trazo.digital>",
         to: [NOTIFY_EMAIL],
         reply_to: email,
         subject: `🏠 ${sourceLabel} — ${name}`,
