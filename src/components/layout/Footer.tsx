@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { MapPin, Phone, Mail, Facebook, Instagram, Linkedin } from "lucide-react";
+import { MapPin, Mail, Facebook, Instagram, Linkedin } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -80,21 +80,12 @@ const Footer = () => {
                 </span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-gold flex-shrink-0" />
-                <a
-                  href="tel:+595991234567"
-                  className="text-primary-foreground/70 hover:text-gold transition-colors text-sm"
-                >
-                  +595 991 234 567
-                </a>
-              </li>
-              <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-gold flex-shrink-0" />
                 <a
-                  href="mailto:info@encarnacioninmobiliaria.com"
+                  href="mailto:carlos@iadomus.com"
                   className="text-primary-foreground/70 hover:text-gold transition-colors text-sm"
                 >
-                  info@encarnacioninmobiliaria.com
+                  carlos@iadomus.com
                 </a>
               </li>
             </ul>

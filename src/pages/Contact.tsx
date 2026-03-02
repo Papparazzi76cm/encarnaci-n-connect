@@ -3,7 +3,9 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
-import { MapPin, Phone, Mail, Send, CheckCircle } from "lucide-react";
+import { MapPin, Mail, Send, CheckCircle, Phone, Loader2 } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -14,11 +16,45 @@ const ContactPage = () => {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real app, this would send to a backend
-    setSubmitted(true);
+    
+    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+      toast({
+        title: "Campos requeridos",
+        description: "Por favor, completa nombre, email y mensaje.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsLoading(true);
+
+    try {
+      const { error } = await supabase.from("leads").insert({
+        name: formData.name.trim(),
+        email: formData.email.trim(),
+        phone: formData.phone.trim() || null,
+        message: formData.message.trim(),
+        source: "contact",
+        interested_in: formData.subject || null,
+      });
+
+      if (error) throw error;
+
+      setSubmitted(true);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast({
+        title: "Error",
+        description: "Hubo un problema al enviar el mensaje. Por favor, intenta de nuevo.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -58,33 +94,15 @@ const ContactPage = () => {
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Phone className="w-6 h-6 text-gold" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-1">WhatsApp / Teléfono</h3>
-                      <a
-                        href="tel:+595991234567"
-                        className="text-muted-foreground hover:text-primary transition-colors"
-                      >
-                        +595 991 234 567
-                      </a>
-                      <p className="text-sm text-muted-foreground mt-1">
-                        Disponible de lunes a sábado
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center flex-shrink-0">
                       <Mail className="w-6 h-6 text-gold" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Email</h3>
                       <a
-                        href="mailto:info@encarnacioninmobiliaria.com"
+                        href="mailto:carlos@iadomus.com"
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
-                        info@encarnacioninmobiliaria.com
+                        carlos@iadomus.com
                       </a>
                     </div>
                   </div>
@@ -207,9 +225,18 @@ const ContactPage = () => {
                           />
                         </div>
 
-                        <Button type="submit" variant="gold" size="lg" className="w-full">
-                          <Send className="w-4 h-4" />
-                          Enviar Mensaje
+                        <Button type="submit" variant="gold" size="lg" className="w-full" disabled={isLoading}>
+                          {isLoading ? (
+                            <>
+                              <Loader2 className="w-4 h-4 animate-spin" />
+                              Enviando...
+                            </>
+                          ) : (
+                            <>
+                              <Send className="w-4 h-4" />
+                              Enviar Mensaje
+                            </>
+                          )}
                         </Button>
 
                         <p className="text-xs text-muted-foreground text-center">
