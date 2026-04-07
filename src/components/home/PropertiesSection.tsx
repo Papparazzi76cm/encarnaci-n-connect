@@ -22,7 +22,7 @@ const properties = [
     id: 2,
     image: property2,
     title: "Departamento Vista al Río",
-    location: "Costanera, Encarnación",
+    location: "Costanera, Asunción",
     price: "USD 1.200/mes",
     type: "Alquiler",
     beds: 2,
