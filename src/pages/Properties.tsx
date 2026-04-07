@@ -53,7 +53,7 @@ const allProperties = [
     id: 4,
     image: property2,
     title: "Dúplex Céntrico",
-    location: "Centro, Encarnación",
+    location: "Centro, Asunción",
     price: 180000,
     priceDisplay: "USD 180.000",
     type: "Inversión",
