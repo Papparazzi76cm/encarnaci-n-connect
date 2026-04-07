@@ -10,7 +10,7 @@ const properties = [
     id: 1,
     image: property1,
     title: "Casa Moderna con Piscina",
-    location: "San Pedro, Encarnación",
+    location: "San Pedro, Asunción",
     price: "USD 285.000",
     type: "Venta",
     beds: 4,
