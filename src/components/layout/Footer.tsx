@@ -76,7 +76,7 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
                 <span className="text-primary-foreground/70 text-sm">
-                  Encarnación, Itapúa<br />Paraguay
+                  Asunción, Central<br />Paraguay
                 </span>
               </li>
               <li className="flex items-center gap-3">
