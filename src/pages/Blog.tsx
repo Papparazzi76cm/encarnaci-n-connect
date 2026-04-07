@@ -40,7 +40,7 @@ const blogPosts = [
   },
   {
     id: 5,
-    title: "¿Es Encarnación una buena inversión inmobiliaria?",
+    title: "¿Es Asunción una buena inversión inmobiliaria?",
     excerpt: "Análisis del mercado local, tendencias de precios, rentabilidades esperadas y proyección a 5-10 años.",
     date: "2024-11-20",
     readTime: "10 min",
