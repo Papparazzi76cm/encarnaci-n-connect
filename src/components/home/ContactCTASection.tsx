@@ -10,7 +10,7 @@ const ContactCTASection = () => {
             No esperes. <span className="text-gradient-gold">Hablemos.</span>
           </h2>
           <p className="text-muted-foreground text-lg mb-8">
-            Si estás pensando en mudarte o invertir en Encarnación, contáctame. 
+            Si estás pensando en mudarte o invertir en Asunción, contáctame. 
             Te cuento la realidad sin vender humo.
           </p>
           
