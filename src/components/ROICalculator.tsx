@@ -76,7 +76,7 @@ const ROICalculator = () => {
           Calculadora de Rentabilidad
         </CardTitle>
         <p className="text-muted-foreground text-sm">
-          Estima el retorno de tu inversión inmobiliaria en Encarnación
+          Estima el retorno de tu inversión inmobiliaria en Asunción
         </p>
       </CardHeader>
       <CardContent className="space-y-6">
