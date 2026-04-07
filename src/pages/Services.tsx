@@ -99,7 +99,7 @@ const ServicesPage = () => {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="order-2 lg:order-1 bg-card rounded-2xl p-8 md:p-12 shadow-medium">
                 <h3 className="font-display text-xl font-bold text-foreground mb-6">
-                  Datos de inversión en Encarnación
+                  Datos de inversión en Asunción
                 </h3>
                 <div className="grid grid-cols-2 gap-6 mb-8">
                   {[
