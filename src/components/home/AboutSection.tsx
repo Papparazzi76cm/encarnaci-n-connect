@@ -17,7 +17,7 @@ const features = [
   {
     icon: Users,
     title: "Experiencia Local",
-    description: "Conocimiento profundo del mercado inmobiliario de Encarnación.",
+    description: "Conocimiento profundo del mercado inmobiliario de Asunción.",
   },
   {
     icon: Scale,
