@@ -66,7 +66,7 @@ const allProperties = [
     id: 5,
     image: property1,
     title: "Casa Familiar con Jardín",
-    location: "Barrio Residencial, Encarnación",
+    location: "Barrio Residencial, Asunción",
     price: 220000,
     priceDisplay: "USD 220.000",
     type: "Comprar",
