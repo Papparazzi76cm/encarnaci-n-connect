@@ -116,10 +116,10 @@ const Properties = () => {
         <section className="bg-primary text-primary-foreground py-16 md:py-24">
           <div className="container-custom px-4 sm:px-6 lg:px-8">
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-              Propiedades en Encarnación
+              Propiedades en Asunción
             </h1>
             <p className="text-primary-foreground/80 text-lg max-w-2xl">
-              Selección exclusiva de propiedades en la zona sur de Paraguay. Calidad sobre cantidad.
+              Selección exclusiva de propiedades en la capital de Paraguay. Calidad sobre cantidad.
             </p>
           </div>
         </section>
