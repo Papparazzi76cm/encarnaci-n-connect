@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://encarnacioninmobiliaria.com/</loc>
+    <loc>https://asuncioninmobiliaria.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://encarnacioninmobiliaria.com/propiedades</loc>
+    <loc>https://asuncioninmobiliaria.com/propiedades</loc>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://encarnacioninmobiliaria.com/servicios</loc>
+    <loc>https://asuncioninmobiliaria.com/servicios</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://encarnacioninmobiliaria.com/sobre-mi</loc>
+    <loc>https://asuncioninmobiliaria.com/sobre-mi</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://encarnacioninmobiliaria.com/blog</loc>
+    <loc>https://asuncioninmobiliaria.com/blog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://encarnacioninmobiliaria.com/contacto</loc>
+    <loc>https://asuncioninmobiliaria.com/contacto</loc>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
