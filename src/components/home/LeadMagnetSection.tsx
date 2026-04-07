@@ -73,7 +73,7 @@ const LeadMagnetSection = () => {
                   Guía gratuita 2026
                 </h2>
                 <p className="text-primary-foreground/80 mb-6">
-                  Todo lo que necesitas saber para vivir o invertir en Encarnación: 
+                  Todo lo que necesitas saber para vivir o invertir en Asunción: 
                   trámites, costes reales, zonas recomendadas y consejos prácticos.
                 </p>
                 <ul className="space-y-3">

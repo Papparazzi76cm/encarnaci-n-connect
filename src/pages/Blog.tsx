@@ -108,7 +108,7 @@ const BlogPage = () => {
                           <User className="w-5 h-5 text-muted-foreground" />
                         </div>
                         <div>
-                          <p className="text-sm font-medium text-foreground">Encarnación Inmobiliaria</p>
+                          <p className="text-sm font-medium text-foreground">Asunción Inmobiliaria</p>
                           <p className="text-xs text-muted-foreground">Asesor Inmobiliario</p>
                         </div>
                       </div>

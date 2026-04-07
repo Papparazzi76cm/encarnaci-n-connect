@@ -8,7 +8,7 @@ interface SEOProps {
   schema?: object;
 }
 
-const SEO = ({ title, description, keywords, url = "https://encarnacioninmobiliaria.com", schema }: SEOProps) => {
+const SEO = ({ title, description, keywords, url = "https://asuncioninmobiliaria.com", schema }: SEOProps) => {
   return (
     <Helmet>
       <title>{title}</title>

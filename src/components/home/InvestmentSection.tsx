@@ -12,7 +12,7 @@ const InvestmentSection = () => {
             Calcula tu inversión
           </h2>
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-            Utiliza nuestra calculadora para estimar la rentabilidad de tu inversión inmobiliaria en Encarnación
+            Utiliza nuestra calculadora para estimar la rentabilidad de tu inversión inmobiliaria en Asunción
           </p>
         </div>
 

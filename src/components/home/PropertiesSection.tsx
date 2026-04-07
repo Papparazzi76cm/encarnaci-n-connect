@@ -34,7 +34,7 @@ const properties = [
     id: 3,
     image: property3,
     title: "Terreno con Potencial",
-    location: "Zona Norte, Encarnación",
+    location: "Zona Norte, Asunción",
     price: "USD 45.000",
     type: "Inversión",
     beds: 0,

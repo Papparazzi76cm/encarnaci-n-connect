@@ -190,7 +190,7 @@ const ROICalculator = () => {
             </div>
 
             <p className="text-xs text-muted-foreground italic">
-              * Estos cálculos son estimaciones basadas en promedios del mercado de Encarnación. 
+              * Estos cálculos son estimaciones basadas en promedios del mercado de Asunción. 
               Los resultados reales pueden variar. Contáctame para un análisis personalizado.
             </p>
           </div>

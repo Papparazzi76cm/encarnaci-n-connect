@@ -170,7 +170,7 @@ const Properties = () => {
                     <div className="relative aspect-[4/3] overflow-hidden">
                       <img
                         src={property.image}
-                        alt={`${property.title} - Inmueble en ${property.location}, Encarnación`}
+                        alt={`${property.title} - Inmueble en ${property.location}, Asunción`}
                         loading="lazy"
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       />

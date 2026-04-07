@@ -95,7 +95,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-primary-foreground/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-primary-foreground/60 text-sm">
-            © {new Date().getFullYear()} Encarnación Inmobiliaria. Todos los derechos reservados.
+            © {new Date().getFullYear()} Asunción Inmobiliaria. Todos los derechos reservados.
           </p>
           <div className="flex gap-6">
             <Link to="/privacidad" className="text-primary-foreground/60 hover:text-gold transition-colors text-sm">
