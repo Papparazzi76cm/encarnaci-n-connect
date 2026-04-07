@@ -106,9 +106,9 @@ const Properties = () => {
   return (
     <div className="min-h-screen">
       <SEO 
-        title={`Venta y Alquiler de Propiedades en Encarnación | ${activeCategory !== 'Todos' ? activeCategory : 'Inmuebles'}`}
-        description="Catálogo de propiedades exclusivas en Encarnación, Paraguay. Departamentos en la Costanera, casas, terrenos y oportunidades de inversión."
-        url="https://encarnacioninmobiliaria.com/propiedades"
+        title={`Venta y Alquiler de Propiedades en Asunción | ${activeCategory !== 'Todos' ? activeCategory : 'Inmuebles'}`}
+        description="Catálogo de propiedades exclusivas en Asunción, Paraguay. Casas, departamentos, terrenos y oportunidades de inversión."
+        url="https://asuncioninmobiliaria.com/propiedades"
       />
       <Header />
       <main className="pt-20 md:pt-24">
