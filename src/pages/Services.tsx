@@ -191,7 +191,7 @@ const ServicesPage = () => {
                 {
                   icon: Users,
                   title: "Base de Clientes",
-                  desc: "Acceso a compradores cualificados que ya buscan en Encarnación.",
+                  desc: "Acceso a compradores cualificados que ya buscan en Asunción.",
                 },
                 {
                   icon: Scale,
