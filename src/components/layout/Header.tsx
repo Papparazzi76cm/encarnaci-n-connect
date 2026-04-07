@@ -47,7 +47,7 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden lg:flex items-center gap-3">
             <Button variant="whatsapp" size="default" asChild>
-              <a href="https://wa.me/595991234567" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/34644937922?text=Hola%2C%20me%20interesa%20obtener%20más%20información%20sobre%20sus%20servicios%20inmobiliarios%20en%20Asunción." target="_blank" rel="noopener noreferrer">
                 <Phone className="w-4 h-4" />
                 WhatsApp
               </a>
@@ -82,7 +82,7 @@ const Header = () => {
                 </Link>
               ))}
               <Button variant="whatsapp" size="lg" className="mt-4" asChild>
-                <a href="https://wa.me/595991234567" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/34644937922?text=Hola%2C%20me%20interesa%20obtener%20más%20información%20sobre%20sus%20servicios%20inmobiliarios%20en%20Asunción." target="_blank" rel="noopener noreferrer">
                   <Phone className="w-4 h-4" />
                   WhatsApp
                 </a>

@@ -131,7 +131,7 @@ const AboutPage = () => {
               tu situación y ver si puedo ayudarte.
             </p>
             <Button variant="gold" size="xl" asChild>
-              <a href="https://wa.me/595991234567" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/34644937922?text=Hola%2C%20me%20interesa%20obtener%20más%20información%20sobre%20sus%20servicios%20inmobiliarios%20en%20Asunción." target="_blank" rel="noopener noreferrer">
                 Hablar por WhatsApp
                 <ArrowRight className="w-5 h-5" />
               </a>
