@@ -309,7 +309,7 @@ const PropertyDetail = () => {
                     asChild
                   >
                     <a
-                      href={`https://wa.me/595981123456?text=${encodeURIComponent(whatsappMessage)}`}
+                      href={`https://wa.me/34644937922?text=${encodeURIComponent(whatsappMessage)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
