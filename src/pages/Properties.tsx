@@ -79,7 +79,7 @@ const allProperties = [
     id: 6,
     image: property3,
     title: "Lote Esquinero",
-    location: "Zona Este, Encarnación",
+    location: "Zona Este, Asunción",
     price: 65000,
     priceDisplay: "USD 65.000",
     type: "Terrenos",
