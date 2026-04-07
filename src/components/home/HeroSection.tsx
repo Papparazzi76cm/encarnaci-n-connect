@@ -10,7 +10,7 @@ const HeroSection = () => {
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Vista panorámica de Encarnación, Paraguay"
+          alt="Vista panorámica de Asunción, Paraguay"
           className="w-full h-full object-cover"
         />
         <div 
