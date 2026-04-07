@@ -34,11 +34,7 @@ const AboutSection = () => {
           {/* Image */}
           <div className="relative">
             <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-large">
-              <img
-                src={profilePhoto}
-                alt="Asesor inmobiliario profesional"
-                className="w-full h-full object-cover"
-              />
+              <img src={profilePhoto} alt="Asesor inmobiliario profesional" className="w-full h-full object-cover" />
             </div>
             {/* Floating Card */}
             <div className="absolute -bottom-6 -right-6 bg-card p-6 rounded-xl shadow-large border border-border max-w-xs hidden md:block">
@@ -56,17 +52,14 @@ const AboutSection = () => {
 
           {/* Content */}
           <div>
-            <span className="text-gold font-medium text-sm uppercase tracking-wider">
-              Sobre Mí
-            </span>
+            <span className="text-gold font-medium text-sm uppercase tracking-wider">Sobre Mí</span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-2 mb-6">
-              Tu aliado de confianza en Asunción
+              Encuentra tu lugar en Asunción
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Soy un profesional inmobiliario con experiencia en el mercado europeo, 
-              ahora dedicado a ayudar a extranjeros e inversores a encontrar su lugar 
-              en Paraguay. Mi enfoque combina la rigurosidad profesional europea con 
-              el conocimiento profundo del mercado local.
+              Soy un profesional inmobiliario con experiencia en el mercado europeo, ahora dedicado a ayudar a
+              extranjeros e inversores a encontrar su lugar en Paraguay. Mi enfoque combina la rigurosidad profesional
+              europea con el conocimiento profundo del mercado local.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-6 mb-8">
