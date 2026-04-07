@@ -45,7 +45,7 @@ Deno.serve(async (req) => {
           </div>
         ` : ""}
         <p style="margin-top: 24px; font-size: 12px; color: #999;">
-          Enviado desde Encarnación Inmobiliaria
+          Enviado desde Asunción Inmobiliaria
         </p>
       </div>
     `;
