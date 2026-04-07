@@ -16,25 +16,25 @@ const Index = () => {
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "RealEstateAgent",
-    "name": "Encarnación Inmobiliaria",
-    "image": "https://encarnacioninmobiliaria.com/logo.png",
-    "description": "Asesoría inmobiliaria profesional en Encarnación, Paraguay. Ayudo a extranjeros e inversores a comprar, alquilar o invertir con seguridad y transparencia.",
+    "name": "Asunción Inmobiliaria",
+    "image": "https://asuncioninmobiliaria.com/logo.png",
+    "description": "Asesoría inmobiliaria profesional en Asunción, Paraguay. Ayudo a extranjeros e inversores a comprar, alquilar o invertir con seguridad y transparencia.",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Encarnación",
-      "addressRegion": "Itapúa",
+      "addressLocality": "Asunción",
+      "addressRegion": "Central",
       "addressCountry": "PY"
     },
     "telephone": "+595991234567",
-    "url": "https://encarnacioninmobiliaria.com"
+    "url": "https://asuncioninmobiliaria.com"
   };
 
   return (
     <div className="min-h-screen">
       <SEO 
-        title="Inmobiliaria en Encarnación | Compra, Alquiler e Inversión en Paraguay"
-        description="Agencia inmobiliaria en Encarnación. Encuentra casas, departamentos y terrenos. Asesoría para extranjeros e inversores con estándares europeos."
-        keywords="inmobiliaria Encarnación, venta de casas Encarnación, terrenos Encarnación Paraguay, invertir en Paraguay, alquiler costanera Encarnación"
+        title="Inmobiliaria en Asunción | Compra, Alquiler e Inversión en Paraguay"
+        description="Agencia inmobiliaria en Asunción. Encuentra casas, departamentos y terrenos. Asesoría para extranjeros e inversores con estándares europeos."
+        keywords="inmobiliaria Asunción, venta de casas Asunción, terrenos Asunción Paraguay, invertir en Paraguay, alquiler Asunción"
         schema={localBusinessSchema}
       />
       <Header />

@@ -16,7 +16,7 @@ const blogPosts = [
   },
   {
     id: 2,
-    title: "Zonas recomendadas para vivir en Encarnación",
+    title: "Zonas recomendadas para vivir en Asunción",
     excerpt: "Análisis detallado de los mejores barrios según tu perfil: familias, jubilados, inversores. Pros, contras y precios orientativos de cada zona.",
     date: "2024-12-10",
     readTime: "6 min",
@@ -40,7 +40,7 @@ const blogPosts = [
   },
   {
     id: 5,
-    title: "¿Es Encarnación una buena inversión inmobiliaria?",
+    title: "¿Es Asunción una buena inversión inmobiliaria?",
     excerpt: "Análisis del mercado local, tendencias de precios, rentabilidades esperadas y proyección a 5-10 años.",
     date: "2024-11-20",
     readTime: "10 min",
@@ -108,7 +108,7 @@ const BlogPage = () => {
                           <User className="w-5 h-5 text-muted-foreground" />
                         </div>
                         <div>
-                          <p className="text-sm font-medium text-foreground">Encarnación Inmobiliaria</p>
+                          <p className="text-sm font-medium text-foreground">Asunción Inmobiliaria</p>
                           <p className="text-xs text-muted-foreground">Asesor Inmobiliario</p>
                         </div>
                       </div>

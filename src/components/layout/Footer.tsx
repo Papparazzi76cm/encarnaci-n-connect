@@ -10,11 +10,11 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <Link to="/" className="inline-block mb-4">
               <span className="font-display text-2xl font-bold">
-                Encarnación<span className="text-gold">Inmobiliaria</span>
+                Asunción<span className="text-gold">Inmobiliaria</span>
               </span>
             </Link>
             <p className="text-primary-foreground/80 text-sm leading-relaxed mb-6">
-              Te ayudo a vivir o invertir en Encarnación con seguridad, transparencia y estándares europeos de profesionalidad.
+              Te ayudo a vivir o invertir en Asunción con seguridad, transparencia y estándares europeos de profesionalidad.
             </p>
             <div className="flex gap-4">
               <a href="#" className="text-primary-foreground/60 hover:text-gold transition-colors">
@@ -76,7 +76,7 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
                 <span className="text-primary-foreground/70 text-sm">
-                  Encarnación, Itapúa<br />Paraguay
+                  Asunción, Central<br />Paraguay
                 </span>
               </li>
               <li className="flex items-center gap-3">
@@ -95,7 +95,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-primary-foreground/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-primary-foreground/60 text-sm">
-            © {new Date().getFullYear()} Encarnación Inmobiliaria. Todos los derechos reservados.
+            © {new Date().getFullYear()} Asunción Inmobiliaria. Todos los derechos reservados.
           </p>
           <div className="flex gap-6">
             <Link to="/privacidad" className="text-primary-foreground/60 hover:text-gold transition-colors text-sm">

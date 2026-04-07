@@ -34,7 +34,7 @@ const ServicesPage = () => {
                   <span className="text-primary font-medium">Para Extranjeros</span>
                 </div>
                 <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
-                  Tu nueva vida en Encarnación, sin complicaciones
+                  Tu nueva vida en Asunción, sin complicaciones
                 </h2>
                 <p className="text-muted-foreground text-lg mb-8">
                   Te acompaño en todo el proceso de mudanza: desde encontrar la propiedad perfecta 
@@ -99,7 +99,7 @@ const ServicesPage = () => {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="order-2 lg:order-1 bg-card rounded-2xl p-8 md:p-12 shadow-medium">
                 <h3 className="font-display text-xl font-bold text-foreground mb-6">
-                  Datos de inversión en Encarnación
+                  Datos de inversión en Asunción
                 </h3>
                 <div className="grid grid-cols-2 gap-6 mb-8">
                   {[
@@ -191,7 +191,7 @@ const ServicesPage = () => {
                 {
                   icon: Users,
                   title: "Base de Clientes",
-                  desc: "Acceso a compradores cualificados que ya buscan en Encarnación.",
+                  desc: "Acceso a compradores cualificados que ya buscan en Asunción.",
                 },
                 {
                   icon: Scale,

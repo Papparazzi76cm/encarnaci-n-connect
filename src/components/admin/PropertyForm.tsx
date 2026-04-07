@@ -232,7 +232,7 @@ export const PropertyForm = ({ open, onOpenChange, property }: PropertyFormProps
           <div className="grid md:grid-cols-2 gap-4">
             <div className="space-y-2">
               <Label htmlFor="location">Ubicación *</Label>
-              <Input id="location" {...register("location")} placeholder="Ej: Encarnación, Paraguay" />
+              <Input id="location" {...register("location")} placeholder="Ej: Asunción, Paraguay" />
               {errors.location && <p className="text-sm text-destructive">{errors.location.message}</p>}
             </div>
 

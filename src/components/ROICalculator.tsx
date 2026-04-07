@@ -76,7 +76,7 @@ const ROICalculator = () => {
           Calculadora de Rentabilidad
         </CardTitle>
         <p className="text-muted-foreground text-sm">
-          Estima el retorno de tu inversión inmobiliaria en Encarnación
+          Estima el retorno de tu inversión inmobiliaria en Asunción
         </p>
       </CardHeader>
       <CardContent className="space-y-6">
@@ -190,7 +190,7 @@ const ROICalculator = () => {
             </div>
 
             <p className="text-xs text-muted-foreground italic">
-              * Estos cálculos son estimaciones basadas en promedios del mercado de Encarnación. 
+              * Estos cálculos son estimaciones basadas en promedios del mercado de Asunción. 
               Los resultados reales pueden variar. Contáctame para un análisis personalizado.
             </p>
           </div>

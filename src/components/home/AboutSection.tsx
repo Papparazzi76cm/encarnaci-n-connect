@@ -17,7 +17,7 @@ const features = [
   {
     icon: Users,
     title: "Experiencia Local",
-    description: "Conocimiento profundo del mercado inmobiliario de Encarnación.",
+    description: "Conocimiento profundo del mercado inmobiliario de Asunción.",
   },
   {
     icon: Scale,
@@ -60,7 +60,7 @@ const AboutSection = () => {
               Sobre Mí
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-2 mb-6">
-              Tu aliado de confianza en Encarnación
+              Tu aliado de confianza en Asunción
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               Soy un profesional inmobiliario con experiencia en el mercado europeo, 

@@ -125,7 +125,7 @@ const ContactPage = () => {
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Ubicación</h3>
                       <p className="text-muted-foreground">
-                        Encarnación, Itapúa<br />Paraguay
+                        Asunción, Central<br />Paraguay
                       </p>
                     </div>
                   </div>

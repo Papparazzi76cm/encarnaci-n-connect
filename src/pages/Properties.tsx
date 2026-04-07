@@ -14,7 +14,7 @@ const allProperties = [
     id: 1,
     image: property1,
     title: "Casa Moderna con Piscina",
-    location: "San Pedro, Encarnación",
+    location: "San Pedro, Asunción",
     price: 285000,
     priceDisplay: "USD 285.000",
     type: "Comprar",
@@ -27,7 +27,7 @@ const allProperties = [
     id: 2,
     image: property2,
     title: "Departamento Vista al Río",
-    location: "Costanera, Encarnación",
+    location: "Costanera, Asunción",
     price: 1200,
     priceDisplay: "USD 1.200/mes",
     type: "Alquilar",
@@ -40,7 +40,7 @@ const allProperties = [
     id: 3,
     image: property3,
     title: "Terreno con Potencial",
-    location: "Zona Norte, Encarnación",
+    location: "Zona Norte, Asunción",
     price: 45000,
     priceDisplay: "USD 45.000",
     type: "Terrenos",
@@ -53,7 +53,7 @@ const allProperties = [
     id: 4,
     image: property2,
     title: "Dúplex Céntrico",
-    location: "Centro, Encarnación",
+    location: "Centro, Asunción",
     price: 180000,
     priceDisplay: "USD 180.000",
     type: "Inversión",
@@ -66,7 +66,7 @@ const allProperties = [
     id: 5,
     image: property1,
     title: "Casa Familiar con Jardín",
-    location: "Barrio Residencial, Encarnación",
+    location: "Barrio Residencial, Asunción",
     price: 220000,
     priceDisplay: "USD 220.000",
     type: "Comprar",
@@ -79,7 +79,7 @@ const allProperties = [
     id: 6,
     image: property3,
     title: "Lote Esquinero",
-    location: "Zona Este, Encarnación",
+    location: "Zona Este, Asunción",
     price: 65000,
     priceDisplay: "USD 65.000",
     type: "Terrenos",
@@ -106,9 +106,9 @@ const Properties = () => {
   return (
     <div className="min-h-screen">
       <SEO 
-        title={`Venta y Alquiler de Propiedades en Encarnación | ${activeCategory !== 'Todos' ? activeCategory : 'Inmuebles'}`}
-        description="Catálogo de propiedades exclusivas en Encarnación, Paraguay. Departamentos en la Costanera, casas, terrenos y oportunidades de inversión."
-        url="https://encarnacioninmobiliaria.com/propiedades"
+        title={`Venta y Alquiler de Propiedades en Asunción | ${activeCategory !== 'Todos' ? activeCategory : 'Inmuebles'}`}
+        description="Catálogo de propiedades exclusivas en Asunción, Paraguay. Casas, departamentos, terrenos y oportunidades de inversión."
+        url="https://asuncioninmobiliaria.com/propiedades"
       />
       <Header />
       <main className="pt-20 md:pt-24">
@@ -116,10 +116,10 @@ const Properties = () => {
         <section className="bg-primary text-primary-foreground py-16 md:py-24">
           <div className="container-custom px-4 sm:px-6 lg:px-8">
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-              Propiedades en Encarnación
+              Propiedades en Asunción
             </h1>
             <p className="text-primary-foreground/80 text-lg max-w-2xl">
-              Selección exclusiva de propiedades en la zona sur de Paraguay. Calidad sobre cantidad.
+              Selección exclusiva de propiedades en la capital de Paraguay. Calidad sobre cantidad.
             </p>
           </div>
         </section>
@@ -170,7 +170,7 @@ const Properties = () => {
                     <div className="relative aspect-[4/3] overflow-hidden">
                       <img
                         src={property.image}
-                        alt={`${property.title} - Inmueble en ${property.location}, Encarnación`}
+                        alt={`${property.title} - Inmueble en ${property.location}, Asunción`}
                         loading="lazy"
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       />

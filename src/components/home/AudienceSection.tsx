@@ -7,7 +7,7 @@ const audiences = [
     icon: Plane,
     title: "Extranjeros que quieren mudarse",
     description:
-      "Te acompaño en todo el proceso: desde la búsqueda de la propiedad ideal hasta tu instalación completa en Encarnación. Asesoría legal, bancaria y de residencia incluida.",
+      "Te acompaño en todo el proceso: desde la búsqueda de la propiedad ideal hasta tu instalación completa en Asunción. Asesoría legal, bancaria y de residencia incluida.",
     cta: "Servicios para extranjeros",
     link: "/servicios#extranjeros",
     gradient: "from-primary/10 to-accent/10",

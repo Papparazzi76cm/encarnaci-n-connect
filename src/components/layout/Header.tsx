@@ -23,7 +23,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
             <span className="font-display text-xl md:text-2xl font-bold text-primary">
-              Encarnación<span className="text-gold">Inmobiliaria</span>
+              Asunción<span className="text-gold">Inmobiliaria</span>
             </span>
           </Link>
 

@@ -45,7 +45,7 @@ Deno.serve(async (req) => {
           </div>
         ` : ""}
         <p style="margin-top: 24px; font-size: 12px; color: #999;">
-          Enviado desde Encarnación Inmobiliaria
+          Enviado desde Asunción Inmobiliaria
         </p>
       </div>
     `;
@@ -57,7 +57,7 @@ Deno.serve(async (req) => {
         Authorization: `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: "Encarnación Inmobiliaria <noreply@trazo.digital>",
+        from: "Asunción Inmobiliaria <noreply@trazo.digital>",
         to: [NOTIFY_EMAIL],
         reply_to: email,
         subject: `🏠 ${sourceLabel} — ${name}`,

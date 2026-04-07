@@ -10,7 +10,7 @@ const HeroSection = () => {
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Vista panorámica de Encarnación, Paraguay"
+          alt="Vista panorámica de Asunción, Paraguay"
           className="w-full h-full object-cover"
         />
         <div 
@@ -25,7 +25,7 @@ const HeroSection = () => {
           
           <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-cream leading-tight mb-6 animate-fade-in-delay-1">
             Te ayudo a vivir o invertir en{" "}
-            <span className="text-gradient-gold">Encarnación</span>
+            <span className="text-gradient-gold">Asunción</span>
           </h1>
           
           <p className="text-lg sm:text-xl text-cream/80 max-w-2xl mb-10 leading-relaxed animate-fade-in-delay-2">
