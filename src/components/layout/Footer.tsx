@@ -14,7 +14,7 @@ const Footer = () => {
               </span>
             </Link>
             <p className="text-primary-foreground/80 text-sm leading-relaxed mb-6">
-              Te ayudo a vivir o invertir en Encarnación con seguridad, transparencia y estándares europeos de profesionalidad.
+              Te ayudo a vivir o invertir en Asunción con seguridad, transparencia y estándares europeos de profesionalidad.
             </p>
             <div className="flex gap-4">
               <a href="#" className="text-primary-foreground/60 hover:text-gold transition-colors">
