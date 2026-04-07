@@ -59,7 +59,7 @@ const ServicesPage = () => {
                 </div>
 
                 <Button variant="gold" size="lg" asChild>
-                  <a href="https://wa.me/595991234567" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/34644937922?text=Hola%2C%20me%20interesa%20obtener%20más%20información%20sobre%20sus%20servicios%20inmobiliarios%20en%20Asunción." target="_blank" rel="noopener noreferrer">
                     Reservar Sesión Informativa Gratuita
                     <ArrowRight className="w-4 h-4" />
                   </a>
@@ -149,7 +149,7 @@ const ServicesPage = () => {
                 </div>
 
                 <Button variant="default" size="lg" asChild>
-                  <a href="https://wa.me/595991234567" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/34644937922?text=Hola%2C%20me%20interesa%20obtener%20más%20información%20sobre%20sus%20servicios%20inmobiliarios%20en%20Asunción." target="_blank" rel="noopener noreferrer">
                     Consultar Oportunidades
                     <ArrowRight className="w-4 h-4" />
                   </a>
@@ -223,7 +223,7 @@ const ServicesPage = () => {
 
             <div className="text-center mt-12">
               <Button variant="cta" size="xl" asChild>
-                <a href="https://wa.me/595991234567" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/34644937922?text=Hola%2C%20me%20interesa%20obtener%20más%20información%20sobre%20sus%20servicios%20inmobiliarios%20en%20Asunción." target="_blank" rel="noopener noreferrer">
                   <Phone className="w-5 h-5" />
                   Quiero Vender mi Propiedad
                 </a>
