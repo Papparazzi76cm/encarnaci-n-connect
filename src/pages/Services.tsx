@@ -34,7 +34,7 @@ const ServicesPage = () => {
                   <span className="text-primary font-medium">Para Extranjeros</span>
                 </div>
                 <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
-                  Tu nueva vida en Encarnación, sin complicaciones
+                  Tu nueva vida en Asunción, sin complicaciones
                 </h2>
                 <p className="text-muted-foreground text-lg mb-8">
                   Te acompaño en todo el proceso de mudanza: desde encontrar la propiedad perfecta 
