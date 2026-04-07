@@ -14,7 +14,7 @@ const allProperties = [
     id: 1,
     image: property1,
     title: "Casa Moderna con Piscina",
-    location: "San Pedro, Encarnación",
+    location: "San Pedro, Asunción",
     price: 285000,
     priceDisplay: "USD 285.000",
     type: "Comprar",
