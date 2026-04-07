@@ -16,7 +16,7 @@ const blogPosts = [
   },
   {
     id: 2,
-    title: "Zonas recomendadas para vivir en Encarnación",
+    title: "Zonas recomendadas para vivir en Asunción",
     excerpt: "Análisis detallado de los mejores barrios según tu perfil: familias, jubilados, inversores. Pros, contras y precios orientativos de cada zona.",
     date: "2024-12-10",
     readTime: "6 min",
